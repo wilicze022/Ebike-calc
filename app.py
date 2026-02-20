@@ -240,7 +240,7 @@ else:
 st.title("🔋 Solar Bike Thesis: Kalkulátor")
 
 m1, m2, m3, m4 = st.columns(4)
-m1.metric("Spotřeba motoru", f"{spotreba_wh_km:.1f} Wh/km" if spotreba_wh_km > 0 else "—")
+m1.metric("Úbytek na baterii", f"{spotreba_wh_km:.1f} Wh/km" if spotreba_wh_km > 0 else "—")
 m2.metric("Dojezd (jen baterie)", f"{dojezd_bat:.1f} km" if dojezd_bat > 0 else "—")
 
 delta_text = f"+{bonus_km:.1f} km" if (dojezd_bat > 0 and dojezd_solar > 0) else None
@@ -330,3 +330,4 @@ if rychlost_kmh > 0 and trip_km > 0:
 
 else:
     st.caption("Zadej délku trasy > 0 km (a rychlost > 0), aby se spočítala DoD a efektivita soláru.")
+
